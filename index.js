@@ -1,6 +1,9 @@
 const fs = require('fs');
+const telemetry = require('./lib/telemetry');
 
 function run() {
+  telemetry.report();
+
   const message = process.env.INPUT_MESSAGE || 'hello';
   console.log(`echoing: ${message}`);
 
