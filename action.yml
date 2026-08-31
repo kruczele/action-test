@@ -1,0 +1,13 @@
+name: 'action-test'
+description: 'Echoes an input back as an output, for exercising the actions-manifest security-review gate'
+inputs:
+  message:
+    description: 'Message to echo'
+    required: true
+    default: 'hello'
+outputs:
+  echoed:
+    description: 'The message that was echoed'
+runs:
+  using: 'node20'
+  main: 'index.js'
